@@ -1,0 +1,107 @@
+
+{% extends 'base.html' %}
+
+{% block head %} 
+
+<title> home page from flask </title>
+
+{% endblock %}
+
+
+{% block body %} 
+
+
+<div>
+    <h1 style="font-size:300%; color:red" align="center"> house price prediction </h1>
+
+    <form action="/predict" method="POST">
+                    <div > 
+			                <p style="font-size:200%;color:black" align="center" > number bedrooms  </p>
+		                   <input type="text" name = "f1" id="f1" value="1">
+			        </div>
+        
+			        <div>
+			            <p style="font-size:200%;color:black" align="center" > number bathrooms </p>
+			            <input type="text" name = "f2" id="f2" value="1">
+			        </div>
+
+
+					<div>
+			             <p style="font-size:200%;color:black" align="center" > sqft_living </p>
+			             <input type="text" name = "f3" id="f3" value="1">
+			        </div>
+
+
+			        <div>
+			            <p style="font-size:200%;color:black" align="center" > sqft_lot </p>
+			            <input type="text" name = "f4" id="f4" value="0">
+			        </div>
+
+			        <div>
+			            <p style="font-size:200%;color:black" align="center" > number floors </p>
+	                    <input type="text" name = "f5" id="f5" value="1"> 
+			        </div>
+
+			        <div>
+			            <p style="font-size:200%;color:black" align="center" > grade </p>
+		                <input type="text" name = "f6" id="f6" value="0">
+			        </div>
+
+			        <div>
+			            <p style="font-size:200%;color:black" align="center" > sqft_above </p>			
+			            <input type="text" name = "f7" id="f7" value="1">
+			        </div>
+
+			        <div>
+			            <p style="font-size:200%;color:black" align="center" > sqft_basement </p>
+			            <input type="text" name = "f8" id="f8" value="0">
+			        </div>
+
+			        <div>
+			            <p style="font-size:200%;color:black" align="center" > yr_built </p>
+			            <input type="text" name = "f9" id="f9" value="0">
+
+			        </div>
+
+			        <div>
+			            <p style="font-size:200%;color:black" align="center" > yr_renovated  </p>			      
+			           <input type="text" name = "f10" id="f10" value="0">
+
+			        </div>
+
+			         <div>
+			            <p style="font-size:200%;color:black" align="center" > lat  </p>
+			
+		               <input type="text" name = "f11" id="f11" value="1">
+			        </div>
+
+			         <div>
+			             <p style="font-size:200%;color:black" align="center" > long  </p>		
+			             <input type="text" name = "f12" id="f12" value="-1">
+			        </div>
+
+			         <div>
+			            <p style="font-size:200%;color:black" align="center" > sqft_living15  </p>		
+		                <input type="text" name = "f13" id="f13" value="1" >
+			        </div>
+
+			         <div>
+
+			            <p style="font-size:200%;color:black" align="center" > sqft_lot15  </p>
+			            <input type="text" name = "f14" id="f14" value="0" >
+			            
+			        </div>
+
+       
+
+        <input type="submit" value="Predict">
+
+    </form>
+
+    <h2 style="font-size:300%;color:red" align="center"  >Predicted: {{pred}}</h2>
+</div>
+
+{% endblock %}
+
+  
+

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+<title> hello from posts </title>
+
+{% endblock %}
+
+
+{% block body %} 
+
+
+{% for post in posts %}
+
+	    <h1> {{ post.title }}</h1>
+
+		{% if post.author %}
+
+		<h1> by : {{ post.author }}</h1>
+
+		{% else %}
+
+		<h1> by : unknown</h1>
+
+		{% endif %}
+
+
+	   <p> {{ post.content }}</p>
+
+{% endfor %}
+
+
+{% endblock %}
